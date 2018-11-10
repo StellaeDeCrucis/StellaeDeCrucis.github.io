@@ -16,7 +16,20 @@
 #bold {
 	font-weight: bold;
 }
-
+.visibledevice {
+	display: none
+}
+.visibledesktop {
+	display: block
+}
+@media screen and (max-width: 414px) {
+    .visibledevice {
+	    display: block
+    }    
+    .visibledesktop {
+	    display: none
+    }
+ }
 @media (min-width: 35em) {
 	.col {
 		display: table-cell;
