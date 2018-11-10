@@ -22,6 +22,12 @@
 .visibledesktop {
 	display: block
 }
+.visiblexsdevice {
+	display: none
+}
+.notvisiblexsdevice{
+	display: block
+}
 @media screen and (max-width: 414px) {
     .visibledevice {
 	    display: block
@@ -29,7 +35,24 @@
     .visibledesktop {
 	    display: none
     }
+    .visiblexsdevice {
+	    display: none
+    }
  }
+@media screen and (max-width: 344px) {
+	.visibledevice {
+		display:none
+	}
+	.visibledesktop {
+		display: none
+	}
+	.visiblexsdevice {
+		display:block
+	}
+	.notvisiblexsdevice{
+		display:none
+	}
+}
 @media (min-width: 35em) {
 	.col {
 		display: table-cell;
