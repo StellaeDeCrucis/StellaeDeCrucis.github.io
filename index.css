@@ -12,6 +12,14 @@
 	src: url(cereal_medium.woff2);
 	font-weight: bold;
 }
+@font-face {
+	font-family: cereal_bold;
+	src: url(cereal_bold.woff2);
+}
+#logotext {
+	font-family: cereal_bold;
+	letter-spacing: -3px
+}
 
 #bold {
 	font-weight: bold;
