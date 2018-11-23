@@ -102,7 +102,7 @@ pre {
 }
 .btn:hover,
 a:hover {
-	opacity: 0.6;
+	color: #ff7886
 }
 .c {
 	max-width: 60em;
