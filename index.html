@@ -8,6 +8,29 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+		
+		<script>
+		$(document).ready(function(){
+		var d = new Date();
+		var n = d.getHours();
+			if (n < 19 || n > 6)
+	  			// If time is after 7PM or before 6AM, apply night theme to ‘body’
+	  			$("body").addClass("day");
+			else
+	 			 // Else use ‘day’ theme
+	  			$("c").addClass("night");
+				$(".a").adClass("nighta");
+			});	
+		</script>
+		<style>
+			.night {
+				background-color: black ; 
+  				color:var(--gray1);
+			}
+			.nighta {
+				color:var(--gray1)
+			}
+		</style>
 		<meta name="theme-color" content="#000">
 	</head>
 	<body class="c">
