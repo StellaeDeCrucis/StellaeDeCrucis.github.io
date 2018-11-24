@@ -21,20 +21,23 @@
 	  			// If time is after 7PM or before 6AM, apply night theme to ‘body’
 	  			$(".c").addClass("night");
 				$("a").addClass("nighta");
+				
 				$(".enable").toggle("fade",1)
 				$(".disable").toggle("fade",1);
+				
 				console.log("it is night")};
 	  			
 			});	
 		$(function() {
 			$("#Button").on("click", function() {
-				$(".c").toggleClass("night",1000);
-				$("a").toggleClass("nighta",1000);
+				$(".c").toggleClass("night",500);
+				$("a").toggleClass("nighta",500);
 				$(".enable").toggle("fade",1);
 				$(".disable").toggle("fade",1);
 			});
 		});
 		</script>
+		
 		<style>
 			.night {
 				background-color: black ; 
@@ -48,14 +51,19 @@
 				bottom: 0;
 				width: 100%;
 			}
+		
 		</style>
 		<meta name="theme-color" content="#000">
 	</head>
 	<body class="c">
 		
 		<h1 id="logotext" class="">Stellae De Crucis</h1>
+		
+		
 		<h3 class="visibledesktop">a <a href="http://www.firstlegoleague.org/challenge#challenge">First Lego League</a> team.</h3>
 		<h3 class="visibledevice">a <a href="http://www.firstlegoleague.org/challenge">FLL</a> team.</h3>
+		
+		
 		<h4>Find us on the web</h4>
 		<h4 id="bold">
 			<a href="https://github.com/stellaedecrucis">github</a>
@@ -65,9 +73,13 @@
 			<a href="mailto:stellae.de.crucis@gmail?subject=Hello">email</a>
 			<p></p>
 		</h4>
+		
+		
 		<h5 class="sticky-footer">
-				<a id="Button" href="#"><span class="enable">enable</span><span class="disable">disable</span> dark mode</a>
+				<a id="Button" href="#"><span class="enable">enable dark mode</span><span class="disable">disable dark mode</span></a>
 		</h5>
+		
+		
 	</body>
 </html>
 
