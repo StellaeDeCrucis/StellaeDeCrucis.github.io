@@ -8,27 +8,45 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  		  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 		
 		<script>
 		$(document).ready(function(){
+			$(".disable").toggle("fade",1);
 		var d = new Date();
 		var n = d.getHours();
 			if (n > 19 || n < 6){
 	  			// If time is after 7PM or before 6AM, apply night theme to ‘body’
 	  			$(".c").addClass("night");
 				$("a").addClass("nighta");
-				console.log("it is night")
-			}
+				$(".enable").toggle("fade",1)
+				$(".disable").toggle("fade",1);
+				console.log("it is night")};
 	  			
-		});	
+			});	
+		$(function() {
+			$("#Button").on("click", function() {
+				$(".c").toggleClass("night",1000);
+				$("a").toggleClass("nighta",1000);
+				$(".enable").toggle("fade",1);
+				$(".disable").toggle("fade",1);
+			});
+		});
 		</script>
 		<style>
 			.night {
 				background-color: black ; 
-  				color:var(--gray1);
+  				color: var(--gray1);
 			}
 			.nighta {
-				color:var(--gray1)
+				color: var(--gray1);
+			}
+			.sticky-footer {
+				position: fixed;
+				bottom: 0;
+				width: 100%;
 			}
 		</style>
 		<meta name="theme-color" content="#000">
@@ -45,7 +63,11 @@
 			<a href="https://instagram.com/stellae.de.crucis">instagram</a>
 			<p></p>
 			<a href="mailto:stellae.de.crucis@gmail?subject=Hello">email</a>
+			<p></p>
 		</h4>
+		<h5 class="sticky-footer">
+				<a id="Button" href="#"><span class="enable">enable</span><span class="disable">disable</span> dark mode</a>
+		</h5>
 	</body>
 </html>
 
