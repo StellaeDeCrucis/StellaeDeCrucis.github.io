@@ -1,50 +1,82 @@
 <html>
 	<head>
+		
 		<title>Stellae De Crucis</title>
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<link rel="stylesheet" href="colours.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8">
-		<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  		  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
 		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		
+  		
 		<script>
-		$(document).ready(function(){
-			$(".disable").toggle("fade",1);
-		var d = new Date();
-		var n = d.getHours();
-			if (n > 19 || n < 6){
-	  			// If time is after 7PM or before 6AM, apply night theme to ‘body’
-	  			$(".c").addClass("night");
-				$("a").addClass("nighta");
-				
-				$(".enable").toggle("fade",1)
-				$(".disable").toggle("fade",1);
-				
-				console.log("it is night")};
-	  			
+			function enableDarkColours(speed) {
+				$(".gh").toggleClass("github-dark",speed);
+				$(".in").toggleClass("insta-dark",speed);
+				$(".em").toggleClass("email-dark",speed);
+				$(".fll").toggleClass("fll-dark",speed);
+				$(".toggle").toggleClass("toggle-dark",speed);
+			}
+			
+			$(document).ready(function(){
+			
+			$(".disable").toggle();
+			
+			enableDarkColours()
+			
+			var d = new Date();
+			var n = d.getHours();
+			
+				if (n > 19 || n < 6){
+	  				
+	  				// If time is after 7PM or before 6AM, apply night theme to ‘body’
+	  				$(".c").addClass("night");
+	  				$("a").addClass("nighta");
+	  	
+	  				// text toggle
+	  				$(".enable").toggle();
+	  				$(".disable").toggle();
+	  				
+	  				// linky boi toggle
+	  				//enableDarkColours(0);
+	  				
+	  				console.log("it is night");
+	  				
+	  			};
 			});	
+			
 		$(function() {
+			
 			$("#Button").on("click", function() {
+				
+				// main style toggle
 				$(".c").toggleClass("night",500);
 				$("a").toggleClass("nighta",500);
+
+				// text toggle
 				$(".enable").toggle();
 				$(".disable").toggle();
+				
+				// linky boi toggle
+				//enableDarkColours(500)
+				
 			});
 		});
 		</script>
 		
 		<style>
-			.night {
-				background-color: black ; 
-  				color: var(--gray1);
+			.nighta:hover {
+				color: var(--pink5);
 			}
 			.nighta {
-				color: var(--gray1);
+				color: var(--gray0)
+			}
+			.night {
+				background-color: black ; 
+  				color: var(--gray0);
 			}
 			.sticky-footer {
 				position: fixed;
@@ -59,24 +91,23 @@
 		
 		<h1 id="logotext" class="">Stellae De Crucis</h1>
 		
-		
-		<h3 class="visibledesktop">a <a href="http://www.firstlegoleague.org/challenge#challenge">First Lego League</a> team.</h3>
-		<h3 class="visibledevice">a <a href="http://www.firstlegoleague.org/challenge">FLL</a> team.</h3>
+		<h3 class="visibledesktop">a <a href="http://www.firstlegoleague.org/challenge#challenge" class="fll fll-dark">First Lego League</a> team.</h3>
+		<h3 class="visibledevice">a <a href="http://www.firstlegoleague.org/challenge" class="fll fll-dark">FLL</a> team.</h3>
 		
 		
 		<h4>Find us on the web</h4>
-		<h4 id="bold">
-			<a href="https://github.com/stellaedecrucis">github</a>
+		<h4 class="medium">
+			<a href="https://github.com/stellaedecrucis" class="gh github-dark">github</a>
 			<p></p>
-			<a href="https://instagram.com/stellae.de.crucis">instagram</a>
+			<a href="https://instagram.com/stellae.de.crucis" class="in insta-dark">instagram</a>
 			<p></p>
-			<a href="mailto:stellae.de.crucis@gmail?subject=Hello">email</a>
+			<a href="mailto:stellae.de.crucis@gmail?subject=Hello" class="em email-dark">email</a>
 			<p></p>
 		</h4>
 		
 		
 		<h5 class="sticky-footer">
-				<a id="Button" href="#"><span class="enable">enable dark mode</span><span class="disable">disable dark mode</span></a>
+				<a id="Button" href="#" class="toggle toggle-dark"><span class="enable">enable dark mode</span><span class="disable">disable dark mode</span></a>
 		</h5>
 		
 		

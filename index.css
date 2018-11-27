@@ -3,6 +3,8 @@
 	margin: 0.5em 0;
 }
 
+/* font stuff */
+
 @font-face {
     font-family: cereal;
     src: url(cereal_book.woff2);
@@ -10,20 +12,47 @@
 @font-face {
 	font-family: cereal;
 	src: url(cereal_medium.woff2);
-	font-weight: bold;
+	font-weight: medium;
 }
 @font-face {
-	font-family: cereal_bold;
+	font-family: cereal;
 	src: url(cereal_bold.woff2);
-}
-#logotext {
-	font-family: cereal_bold;
-	letter-spacing: -3px
-}
-
-#bold {
 	font-weight: bold;
 }
+#logotext {
+	font-weight: bold;
+	letter-spacing: -3px
+}
+.medium {
+	font-weight: medium;
+}
+.bold {
+	font-weight: bold;
+}
+
+/* linky bois */
+
+.github-dark {
+	color: var(--blue5);
+}
+.insta-dark {
+	color: var(--orange5);
+}
+.email-dark {
+	color: var(--green5)
+}
+.fll-dark {
+	color: var(--pink5)
+}
+.toggle-dark {
+	color: var(--grey1)
+}
+.toggle {
+	text-decoration:none;
+}
+
+/* slightly edited code stolen from darcylf.me */
+
 .visibledevice {
 	display: none
 }
@@ -108,7 +137,7 @@ a:hover {
 	max-width: 60em;
 	padding: 1em;
 	margin: auto;
-	background-color: var(--gray1);
+	background-color: var(--gray0);
 	font: 1em/1.6 cereal;
 }
 h6 {
